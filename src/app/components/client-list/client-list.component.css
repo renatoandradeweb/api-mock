@@ -1,0 +1,61 @@
+.texto-cnpj {
+  font-size: 12px;
+}
+.titulo-cnpj {
+  font-size: 18px;
+}
+.texto-ativo {
+  font-size: 13px;
+}
+.texto-editar-btn {
+  font-size: 15px;
+}
+
+.novo-btn {
+  border-radius: 5px;
+  background-color: #4486EA !important;
+  border: none;
+  color: #fff;
+  padding: 5px 15px;
+}
+
+.radios-btn {
+  border-radius: 5px;
+  background-color: #E18F53 !important;
+  border: none;
+  color: #fff;
+  padding: 5px 15px;
+}
+.verde {
+  color: green;
+  font-size: 30px;
+}
+
+.vermelho {
+  color: red;
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 27px;
+}
+
+@media screen and (max-width: 600px) {
+  .texto-cnpj {
+    font-size: 12px;
+  }
+  .titulo-cnpj {
+    font-size: 18px;
+  }
+  .texto-ativo {
+    font-size: 13px;
+  }
+  .texto-editar-btn {
+    font-size: 15px;
+  }
+
+  h2 {
+    font-size: 17px;
+  }
+
+}

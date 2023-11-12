@@ -1,0 +1,16 @@
+/* Centraliza a logomarca na parte superior da barra de navegação */
+.navbar-brand {
+
+  text-align: center;
+}
+
+.topbar {
+  background-color: #616161 !important;
+}
+
+/* Ajusta o espaçamento do menu de navegação na parte inferior */
+
+.navbar-nav li a {
+  color: black;
+  padding: 10px;
+}

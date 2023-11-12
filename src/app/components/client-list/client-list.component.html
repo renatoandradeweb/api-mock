@@ -1,0 +1,22 @@
+<div class="container mt-5">
+  <div class="container border-lista-clientes mb-5">
+    <div class="row">
+      <div class="col-md-6 col-lg-6 col-sm-9 col-8">
+        <h2><img src="./../../../assets/user.png" class="img-fluid" alt=""> Lista de Clientes</h2>
+      </div>
+      <div class="col-md-6 col-lg-6 col-sm-3 col-4 mb-sm-2 mb-lg-0 mb-md-0 mb-2">
+        <a routerLink="/add-client" class="btn btn-sm btn-primary float-end novo-btn">+ NOVO</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row bg-white mt-2 mb-2 p-2 align-items-center v-100" *ngFor="let cliente of clientes$ | async">
+      <div class="col-12 col-lg-8 col-md-8 col-sm-12"><span class="me-3 titulo-cnpj">{{ cliente.name }} </span><span class="me-3 texto-cnpj"> {{ formatarCNPJFormatado(cliente.cnpj) }}</span></div>
+      <div class="col-6 col-lg-2 col-md-2 col-sm-6"><span [ngClass]="{'verde': cliente.status === 'Ativo', 'vermelho': cliente.status === 'Inativo'}">• </span> {{ cliente.status }} </div>
+      <!-- <div class="col-3"><a [routerLink]="['/edit-client', cliente.cnpj]"><button class="btn btn-sm btn-primary radios-btn float-end"> EDITAR </button></a></div> -->
+      <div class="col-6 col-lg-2 col-md-2 col-sm-6"><button class="btn btn-sm btn-primary radios-btn float-end"> EDITAR </button></div>
+    </div>
+  </div>
+
+</div>

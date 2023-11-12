@@ -1,0 +1,35 @@
+<div class="container mt-5">
+  <div class="container border-lista-clientes mb-5">
+    <div class="row">
+      <div class="col-md-12">
+        <h2><img src="./../../../assets/user.png" class="img-fluid" alt=""> Novo Cliente</h2>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <form (ngSubmit)="adicionarCliente()" #clienteForm="ngForm">
+          <div class="form-group">
+            <label for="name">Nome:</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="novoCliente.name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="cnpj">CNPJ:</label>
+            <input type="text" class="form-control"  id="cnpj" [(ngModel)]="novoCliente.cnpj" name="cnpj" [mask]="cnpjMask" required>
+          </div>
+          <div class="form-group">
+            <label for="status">Status:</label>
+            <select class="form-select" id="status" [(ngModel)]="novoCliente.status" name="status" required>
+              <option value="ativo">Ativo</option>
+              <option value="inativo">Inativo</option>
+            </select>
+          </div>
+          <button type="submit" [disabled]="!clienteForm.valid" class="btn btn-primary mt-3 salvar-btn">SALVAR</button>
+        </form>
+
+</div>
+</div>
+</div>
